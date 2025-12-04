@@ -29,7 +29,7 @@ void heapify(int a[10],int n){
 int main(){
     int n,a[10],i,ch;
     for(;;){
-        printf("\n1.Create Heap\n2.Extract max\n3.Exit");
+        printf("\n1.Create Heap\n2.Extract Heap\n3.Exit");
         printf("\nRead choice: ");
         scanf("%d",&ch);
         switch(ch){
@@ -49,17 +49,17 @@ int main(){
             }
             case 2:{
                 if(n>=1){
-                    printf("\nKey deleted is %d",a[1]);
+                    printf("\nKey extracted is %d",a[1]);
                     a[1]=a[n];
                     n-=1;
                     heapify(a,n);
-                    printf("\nHeap after deleting\n");
+                    printf("\nHeap after extraction\n");
                     for(i=1;i<=n;i++){
                         printf("%d\t",a[i]);
                     }
                 }
                 else{
-                    printf("\nNo element to delete");
+                    printf("\nNo element to extract");
                 }
                 break;
             }
